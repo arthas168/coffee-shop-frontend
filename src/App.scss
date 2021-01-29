@@ -1,0 +1,59 @@
+body {
+  background-image: url("./images/coffee.jpg");
+  background-size: cover;
+  .App {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .coffee-list {
+      position: relative;
+      width: 80%;
+      height: 75%;
+      margin: 0 auto;
+      flex-wrap: wrap;
+
+      display: flex;
+      justify-content: flex-start;
+
+
+      .coffee-row {
+        list-style: none;
+
+        .product-name,
+        .description,
+        .origin-country,
+        .price {
+          color: white;
+        }
+
+        .product-name {
+          font-size: 22px;
+          padding-bottom: 10px;
+        }
+
+        .description,
+        .origin-country,
+        .price {
+          font-size: 18px;
+          padding-left: 50px;
+          padding-bottom: 5px;
+
+        }
+      }
+
+      &::after {
+        content: "";
+        background-color: black;
+        opacity: 0.8;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+}
